@@ -16,8 +16,8 @@ source=('teamspeak3-server.ini'
         'teamspeak3-server.service')
 source_i686=("http://teamspeak.gameserver.gamed.de/ts3/releases/$pkgver/teamspeak3-server_linux_x86-$pkgver.tar.bz2")
 source_x86_64=("http://teamspeak.gameserver.gamed.de/ts3/releases/$pkgver/teamspeak3-server_linux_amd64-$pkgver.tar.bz2")
-md5sums=('SKIP'
-            'SKIP')
+sha256sums=('3164c0cb21b317d9ba81e4698f26603e4b5acc19cadb24e0586fd5d358e641ee'
+            'e278e962cb0068059d5a0b981110dce1a708de59bb8355cdfc6b519dc14b21fa')
 sha256sums_i686=('6c1138abc8e849d956793ddbf4fda79777c5311627239f7bac2a1c08d66373a7')
 sha256sums_x86_64=('6bb0e8c8974fa5739b90e1806687128342b3ab36510944f576942e67df7a1bd9')
 
