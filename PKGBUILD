@@ -12,12 +12,12 @@ depends=('glibc')
 optdepends=('mariadb-connector-c: for MariaDB backend')
 backup=(etc/default/teamspeak3-server)
 install='teamspeak3-server.install'
-source=('teamspeak3-server.default'
+source=('teamspeak3-server.ini'
         'teamspeak3-server.service')
 source_i686=("http://teamspeak.gameserver.gamed.de/ts3/releases/$pkgver/teamspeak3-server_linux_x86-$pkgver.tar.bz2")
 source_x86_64=("http://teamspeak.gameserver.gamed.de/ts3/releases/$pkgver/teamspeak3-server_linux_amd64-$pkgver.tar.bz2")
-sha256sums=('bc52b851f5d7c878050e70661fafa8983031a43d115bc2762bae82f4331ee36e'
-            '3d1b7c34e6d460d12f4bf51bdf96d2d58036493a969025fabd2b4ea38c9ac170')
+md5sums=('SKIP'
+            'SKIP')
 sha256sums_i686=('6c1138abc8e849d956793ddbf4fda79777c5311627239f7bac2a1c08d66373a7')
 sha256sums_x86_64=('6bb0e8c8974fa5739b90e1806687128342b3ab36510944f576942e67df7a1bd9')
 
@@ -30,7 +30,7 @@ fi
 package() {
     cd "$srcdir"
 
-    install -Dm 644 teamspeak3-server.default "$pkgdir/etc/default/teamspeak3-server"
+    install -Dm 644 teamspeak3-server.ini "$pkgdir/etc/teamspeak3-server.ini"
     install -Dm 644 teamspeak3-server.service "$pkgdir/usr/lib/systemd/system/teamspeak3-server.service"
 
     install -Dm 755 "teamspeak3-server_linux_$_TSARCH/ts3server" "$pkgdir/usr/bin/ts3server"
